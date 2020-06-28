@@ -24,7 +24,6 @@ admin.initializeApp({
 });
 
 const isAuthinticated = (req, res, next) => {
-
     next();
 }
 
@@ -45,4 +44,4 @@ app.get('/authenticated', isAuthinticated, (req, res) => {
 
 const port = process.env.PORT || 3000;
 
-app.listen(3000, () => console.log("Running on " + port));
+app.listen(3000, () => console.log("Running on localhost:" + port));

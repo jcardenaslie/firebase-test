@@ -39,9 +39,9 @@ const signInWithGoogle = () => {
         }
 
         localStorage.setItem('firebase-user', JSON.stringify(userInfo));
-        localStorage.setItem('firebase-token', data.credential.idToken);
 
         setUserProfileInfo(userInfo);
+        homeSetLoggedInLayout();
 
     }).catch(data => {
         console.log(data);
